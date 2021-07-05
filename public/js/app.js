@@ -1,5 +1,3 @@
-console.log("Client side js is loaded");
-
 //dohvatis podatke iz forme na indexu.hbs
 const form = document.querySelector("form");
 const search = document.querySelector("input");
