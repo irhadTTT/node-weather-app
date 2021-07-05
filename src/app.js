@@ -5,6 +5,7 @@ const geoCode = require('./utilis/geocode');
 const forecast = require('./utilis/forecast');
 
 const app = express();
+const port = process.env.PORT || 44333;
 //define paths
 const publicDirectoryPath = path.join(__dirname, "../public");
 const views = path.join(__dirname, "../templates/views");
@@ -90,6 +91,6 @@ app.get("/products", (req, res)=>{
         products: []
     });
 });
-app.listen(44333, ()=>{
-    console.log("Server is up on port 44333");
+app.listen(port, ()=>{
+    console.log("Server is up on port" + port);
 });
