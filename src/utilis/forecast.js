@@ -10,7 +10,9 @@ const forecast = (lat, long, callback) => {
         } else if (body.error){
             callback(body.error.info, undefined);
         } else {
-            callback(undefined, body.location.name+ ":"+ body.current.weather_descriptions[0]); 
+            console.log(body);
+            callback(undefined, body.location.name+ ":"+ body.current.weather_descriptions[0] +". It is temperature of "
+            +body.current.temperature+ " Celsius and wind speed is "+ body.current.wind_speed + " km/h."); 
         }
     })
 }
